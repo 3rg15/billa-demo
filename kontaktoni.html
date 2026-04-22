@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billa - Kontaktoni</title>
+  <link rel="stylesheet" href="kontaktoni.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/billa-logo.jpg" alt="Billa Logo">
+  </a>
+    <button class="menu-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rreth.html">Rreth Nesh</a></li>
+      <li><a href="dyqanet.html">Dyqanet</a></li>
+      <li><a href="kontaktoni.html">Kontaktoni</a></li>
+      <li><a href="punesim.html">Punësim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <h2>Kontaktoni</h2>
+    <p>Na kontaktoni për më shumë informacion ose bashkëpunim.</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Emri juaj" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mesazhi juaj" rows="5" required></textarea>
+      <button type="submit">Dërgo</button>
+    </form>
+
+    <div class="contact-info">
+  <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Albania</p>
+  <p><i class="fas fa-phone"></i> <strong>Tel:</strong> +355 123 456 789</p>
+  <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@billa.com</p>
+</div>
+
+<div class="social-links">
+  <a href="https://instagram.com/billaalbania" target="_blank" rel="noopener">
+    <i class="fab fa-instagram"></i> <strong>Instagram:</strong> billaalbania
+  </a>
+  <a href="https://facebook.com/billaalbania" target="_blank" rel="noopener">
+    <i class="fab fa-facebook"></i> <strong>Facebook:</strong> billaalbania
+  </a>
+</div>
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Billa</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector("nav");
+
+  window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      // scrolling down → hide navbar
+      navbar.style.top = "-80px";
+    } else {
+      // scrolling up → show navbar
+      navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+</body>
+</html>

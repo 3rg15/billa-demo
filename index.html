@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billa - Pllaka & Parket</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/billa-logo.jpg" alt="Billa Logo">
+  </a>
+    <button class="menu-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rreth.html">Rreth Nesh</a></li>
+      <li><a href="dyqanet.html">Dyqanet</a></li>
+      <li><a href="kontaktoni.html">Kontaktoni</a></li>
+      <li><a href="punesim.html">Punësim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+<section class="banner">
+  <img src="images/banner.jpg" alt="Billa Banner">
+</section>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <!-- Highlights -->
+    <section class="highlights">
+      <div class="highlight-card">
+        <h3>Cilësi e Lartë</h3>
+        <p>Produkte të përzgjedhura me kujdes.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Varietete Moderne</h3>
+        <p>Stile dhe dizajne për çdo shije.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Shërbim Profesional</h3>
+        <p>Këshillim dhe asistencë për klientët.</p>
+      </div>
+    </section>
+
+<section class="offers">
+  <h2>Çfarë ofron Billa</h2>
+  <div class="offers-slider" id="offersSlider">
+    <div class="offer-card">
+      <img src="images/furnitures.jpg" alt="Mobilie">
+      <div class="overlay">
+        <h3>Mobilie</h3>
+        <p>Zgjidhje moderne për arredimin e shtëpisë.</p>
+      </div>
+    </div>
+    <div class="offer-card">
+      <img src="images/tiles.jpg" alt="Pllaka">
+      <div class="overlay">
+        <h3>Pllaka</h3>
+        <p>Pllaka me cilësi të lartë për çdo hapësirë.</p>
+      </div>
+    </div>
+    <div class="offer-card">
+      <img src="images/parquet.jpg" alt="Parket">
+      <div class="overlay">
+        <h3>Parket</h3>
+        <p>Dysheme elegante dhe të qëndrueshme.</p>
+      </div>
+    </div>
+    <div class="offer-card">
+      <img src="images/hydrosanitary.jpg" alt="Hidrosanitare">
+      <div class="overlay">
+        <h3>Hidrosanitare</h3>
+        <p>Produkte funksionale dhe estetike për banjo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow Controls -->
+  <button class="arrow left" onclick="slideLeft()">&#10094;</button>
+  <button class="arrow right" onclick="slideRight()">&#10095;</button>
+</section>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Billa</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
+<script>
+  const slider = document.getElementById('offersSlider');
+
+  function slideLeft() {
+    const cardWidth = slider.querySelector('.offer-card').offsetWidth + 16; // card + gap
+    slider.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' }); // move 2 cards
+  }
+
+  function slideRight() {
+    const cardWidth = slider.querySelector('.offer-card').offsetWidth + 16;
+    slider.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
+  }
+</script>
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector("nav");
+
+  window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      // scrolling down → hide navbar
+      navbar.style.top = "-80px";
+    } else {
+      // scrolling up → show navbar
+      navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+

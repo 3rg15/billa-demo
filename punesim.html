@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billa - Punësim</title>
+  <link rel="stylesheet" href="punesim.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/billa-logo.jpg" alt="Billa Logo">
+  </a>
+    <button class="menu-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rreth.html">Rreth Nesh</a></li>
+      <li><a href="dyqanet.html">Dyqanet</a></li>
+      <li><a href="kontaktoni.html">Kontaktoni</a></li>
+      <li><a href="punesim.html">Punësim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <h2>Bashkohu me ekipin tonë</h2>
+    <p>Shiko pozicionet e hapura dhe apliko për punë tek Billa.</p>
+
+    <div class="job-list">
+      <div class="job-card">
+        <h3>Shitës në dyqan</h3>
+        <p>Kërkojmë persona energjikë për shitje dhe asistencë klientësh.</p>
+      </div>
+      <div class="job-card">
+        <h3>Arkitekt i brendshëm</h3>
+        <p>Kërkojmë arkitekt për dizajn të hapësirave me pllaka dhe parket.</p>
+      </div>
+    </div>
+
+    <form class="apply-form">
+      <input type="text" placeholder="Emri juaj" required>
+      <input type="email" placeholder="Email" required>
+      <input type="file" placeholder="Ngarko CV" required>
+      <button type="submit">Apliko</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Billa</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  <script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector("nav");
+
+  window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      // scrolling down → hide navbar
+      navbar.style.top = "-80px";
+    } else {
+      // scrolling up → show navbar
+      navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billa - Dyqanet</title>
+  <link rel="stylesheet" href="dyqanet.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="images/billa-logo.jpg" alt="Billa Logo">
+    </a>
+    <button class="menu-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rreth.html">Rreth Nesh</a></li>
+      <li><a href="dyqanet.html">Dyqanet</a></li>
+      <li><a href="kontaktoni.html">Kontaktoni</a></li>
+      <li><a href="punesim.html">Punësim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content wrapper -->
+  <div class="page-content">
+
+    <!-- Stores Section -->
+    <section class="stores">
+
+      <!-- Billa Unaza e Re -->
+      <section class="dyqanet-section">
+        <h2>Billa Unaza e Re</h2>
+        <p>Vizitoni showroom-in tonë në Unazën e Re:</p>
+        <div class="dyqanet">
+          <div class="map-half">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191722.3745034947!2d19.569387567167578!3d41.33796044373877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031b8d6a85bed%3A0x57ab7a6fbfd799b0!2sBilla%20Unaza%20e%20Re!5e0!3m2!1sen!2s!4v1776790582381!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="photos-half">
+            <div class="slider">
+              <div class="slides">
+                <img src="images/store1.jpg" alt="Store photo 1">
+                <img src="images/store2.jpg" alt="Store photo 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Billa Lushnje -->
+      <section class="dyqanet-section">
+        <h2>Billa Lushnje</h2>
+        <p>Vizitoni showroom-in tonë në Lushnje:</p>
+        <div class="dyqanet">
+          <div class="map-half">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.4856405526034!2d19.691648374783387!3d40.92702252442621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135005d1324ff8b5%3A0x64b6ff37a36d82be!2sBilla%20Lushnj%C3%AB!5e0!3m2!1sen!2s!4v1776793784107!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="photos-half">
+            <div class="slider">
+              <div class="slides">
+                <img src="images/lushnje1.jpg" alt="Billa Lushnje photo 1">
+                <img src="images/lushnje2.jpg" alt="Billa Lushnje photo 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Billa Kavajë -->
+      <section class="dyqanet-section">
+        <h2>Billa Kavajë</h2>
+        <p>Vizitoni showroom-in tonë në Kavajë:</p>
+        <div class="dyqanet">
+          <div class="map-half">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d768700.1144040308!2d19.543831!3d41.1839507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134fdfc2bd52f5c7%3A0x837df36a975e46ca!2sBilla%20Kavaj%C3%AB!5e0!3m2!1sen!2s!4v1776807338802!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="photos-half">
+            <div class="slider">
+              <div class="slides">
+                <img src="images/kavaje1.jpg" alt="Billa Kavajë photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Billa</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px"; // hide
+      } else {
+        navbar.style.top = "0"; // show
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+</body>
+</html>
